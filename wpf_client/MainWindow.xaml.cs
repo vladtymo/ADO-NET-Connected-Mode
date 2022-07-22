@@ -30,7 +30,8 @@ namespace wpf_client
 
             try
             {
-                db = new SportShopDb(@"DESKTOP-O0M8V28\SQLEXPRESS", "SportShop");
+                string connection = ConfigurationManager.ConnectionStrings["SportShopConn"].ConnectionString;
+                db = new SportShopDb(connection);
             }
             catch (Exception ex)
             {
